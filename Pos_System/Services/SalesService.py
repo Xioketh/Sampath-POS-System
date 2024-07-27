@@ -22,6 +22,7 @@ class SaleService:
         except ValueError:
             return False
     def date_wise_sales_analyse(self):
+        print("----- Date wise Sales Analyse ----------")
         print("Select Branch to Analyse Date wise Sales")
         branches = self.branch_repository.get_all();
 
@@ -96,7 +97,7 @@ class SaleService:
         print("---------------------------------------------")
 
     def save_Sale(self):
-        print("Adding Sale...")
+        print("----- Save Sale -----")
         product_data = []
         count = int(input("How many Products?"))
         c = 0
@@ -166,7 +167,7 @@ class SaleService:
         print("---------------------------------------------")
 
     def sale_analyse_whole_market_network(self):
-        print("Sale Analyse for whole Market Network")
+        print("---------- Sale Analyse for whole Market Network  ----------")
 
         print("Please Provide Date Range yyyy-mm-dd")
         # from_date = input("From >")

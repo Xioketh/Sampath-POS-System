@@ -17,7 +17,7 @@ class ProductsService:
         except ValueError:
             return False
     def get_all_Products(self):
-        print("All Products")
+        print("----- All Products -----")
         products = self.product_repository.getAllProducts()
         for product in products:
             print("Id:", product[0], "/Product Name:", product[1], "/Product Qty:", product[2],
@@ -25,6 +25,7 @@ class ProductsService:
         print("---------------------------------------------")
 
     def price_update(self):
+        print("----- Update Product price -----")
         print("Active Product List")
 
         products = self.product_repository.getAllProducts()
@@ -60,7 +61,7 @@ class ProductsService:
         print("---------------------------------------------")
 
     def product_sale_analyse(self):
-        print("Product Sales Analyse")
+        print("---------- Product Sales Analyse ----------")
 
         products = self.product_repository.getAllProducts()
         for product in products:
@@ -145,7 +146,7 @@ class ProductsService:
         print("---------------------------------------------")
 
     def trending_products_research(self):
-        print("Trending Product Research")
+        print("---------- Trending Product Research ----------")
 
         trendProduct = self.sale_products_repository.getAllTimeTrendProduct();
         print("All Time Trending Product: ", trendProduct[0][0], ", Total Sales Count: ", trendProduct[0][2])
@@ -182,7 +183,7 @@ class ProductsService:
         print("---------------------------------------------")
 
     def top_product_selling_branch_research(self):
-        print("Top Product Selling Branch Research")
+        print("---------- Top Product Selling Branch Research ----------")
 
         trendProduct = self.sale_products_repository.getAllTimeTrendProduct();
         print("All Time Trending Product Selling Branch is: ", trendProduct[0][1])
